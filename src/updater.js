@@ -40,13 +40,12 @@ async function update(ip) {
     let index = 0;
 
     for await (const dns of records) {
-        console.log(index++, ':\t', dns.name, '\t=>\t', dns.content)
-        
         if (dns.content === ip) {
             console.log('🔒 IP is the same, skipping...');
             return;
         }
-
+        
+        console.log(index++, ':\t', dns.name, '\t=>\t', dns.content)
         const data = await updateRecord(dns, ip);
 
         await sendNotification();
