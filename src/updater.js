@@ -42,7 +42,7 @@ async function update(ip) {
     for await (const dns of records) {
         if (dns.content === ip) {
             console.log('🔒 IP is the same, skipping...');
-            return;
+            continue;
         }
         
         console.log(index++, ':\t', dns.name, '\t=>\t', dns.content)
