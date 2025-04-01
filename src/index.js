@@ -1,8 +1,6 @@
-import { executeDnsUpdate } from "./updater.js";
+import { execute } from "./updater.js";
 
-const timeInterval = 15 * 1000 // 15 seconds
+const timeInterval = process.env.TIME_INTERVAL_IN_MINUTES * 60 * 1000;
 
-setInterval(
-    executeDnsUpdate, 
-    timeInterval
-);
+execute();
+setInterval(execute, timeInterval);
