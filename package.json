@@ -1,13 +1,19 @@
 {
   "name": "cloudflare-dynamic-dns",
+  "description": "Simple app to update Cloudflare DNS records with your current IP address",
   "version": "1.0.0",
   "main": "src/index.js",
   "type": "module",
+  "keywords": [
+    "cloudflare",
+    "dns",
+    "dynamic",
+    "ip",
+    "update"
+  ],
+  "author": "Reativ Solutions <hello@reativ.com>",
+  "license": "ISC",
   "scripts": {
     "start": "node --env-file=.env src/index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
